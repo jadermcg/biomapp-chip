@@ -74,7 +74,7 @@ Options:
 
 ## Dependencies
 
-To run the program, you will need the following libraries installed on your Linux-based system:
+To run the program, you will need the following libraries installed on your Linux Ubuntu/Debian-based system:
 - Armadillo Linear Algebra
 - Boost Filesystem
 - R
