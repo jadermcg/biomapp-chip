@@ -60,7 +60,7 @@ export PATH=$PATH:/path/to/your/biomapp_chip/
 
 ## Usage
 ```
-Uso: biomapp -i <fasta> <options>
+Use: biomapp -i <fasta> <options>
 Options:
 
 -k <size of kmer>
