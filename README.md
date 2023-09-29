@@ -13,10 +13,27 @@ The core functionality of `Biomapp::chip` revolves around its innovative k-mer c
 1. **Data Input**: The algorithm starts by taking sequence data as input, typically in FASTA or FASTQ format.
   
 2. **K-mer Counting**: Employing the `SMT` data structure, k-mer frequencies in the sequence data are accurately and efficiently counted.
-  
-3. **Motif Discovery**: After obtaining k-mer frequencies, the algorithm proceeds to identify statistically significant motifs using a efficient version of `EM` called `FAST-EM` set through predefined metrics and statistical tests.
 
-4. **Output**: The identified motifs, along with their statistical significance and locations within the sequence data, are outputted for further analysis or visualization.
+3.**Pre-optimized models**: `Biomapp::chip` toolkit includes an advanced feature of pre-optimized models, which are essential for accelerating the motif discovery process. These models are generated after the `SMT` component has successfully counted the kmers.
+  
+4. **Motif Discovery**: After obtaining k-mer frequencies, the algorithm proceeds to identify statistically significant motifs using a efficient version of `EM` called `FAST-EM` set through predefined metrics and statistical tests.
+
+5. **Output**: The identified motifs, along with their statistical significance and locations within the sequence data, are outputted for further analysis or visualization.
+
+#### How Pre-optimized Models Are Generated
+1. **K-mer Counting via smt**: Initially, the `smt` component performs the task of k-mer counting in the given biological sequences.
+
+2. **Sibling K-mer Discovery via kdive**: Following the counting process, the `kdive` algorithm comes into play. It identifies all sibling kmers with up to `d` mutations from the original k-mer.
+
+3. **Model Optimization**: Based on these sibling kmers, pre-optimized models are generated, which serve as heuristic models for guiding the main algorithm in subsequent runs.
+
+#### Benefits of Using Pre-optimized Models
+
+- **Time Efficiency**: Utilizing pre-optimized models significantly speeds up the motif discovery process.
+  
+- **High Accuracy**: The sibling kmers identified by `kdive` ensures a nuanced and robust model, making the discovery process more accurate.
+  
+- **Resource Efficiency**: The use of pre-optimized models reduces the computational resources required, making it ideal for lower-end systems as well.
 
 ## Why Use biomapp::chip?
 
