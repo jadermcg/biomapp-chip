@@ -2,7 +2,7 @@
 
 count=0
 script_name=$(basename $0)
-uso="Uso: $script_name -i <fasta> <options>\n
+uso="Use: $script_name -i <fasta> <options>\n
 Options:\n
 -k <size of kmer>\n
 -n <number of models>\n
