@@ -14,7 +14,7 @@ The core functionality of `Biomapp::chip` revolves around its innovative k-mer c
   
 2. **K-mer Counting**: Employing the `SMT` data structure, k-mer frequencies in the sequence data are accurately and efficiently counted.
   
-3. **Motif Discovery**: After obtaining k-mer frequencies, the algorithm proceeds to identify statistically significant motifs using a set of predefined metrics and statistical tests.
+3. **Motif Discovery**: After obtaining k-mer frequencies, the algorithm proceeds to identify statistically significant motifs using a efficient version of `EM` called `FAST-EM` set through predefined metrics and statistical tests.
 
 4. **Output**: The identified motifs, along with their statistical significance and locations within the sequence data, are outputted for further analysis or visualization.
 
