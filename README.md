@@ -49,11 +49,35 @@ Instructions to follow...
 
 ## Usage
 
-Examples to follow...
+Uso: biomapp -i <fasta> <options>
+ Options:
+ -k <size of kmer>
+ -n <number of models>
+ -d <number of mutations>
+ -e <type of EM. Can be oops, zoops or anr>
+ -r <number of em iterations>
+ -f <cutoff for convervenge control>
+ -c <compression: 0 no compression, 1 LF4 compression>
 
 ## Dependencies
 
-List of dependencies to follow...
+To run the program, you will need the following libraries installed on your Ubuntu-based system:
+
+- Boost Filesystem
+- R
+- BLAS (Basic Linear Algebra Subprograms)
+- TBB (Threading Building Blocks)
+- Standard C++ Library
+- GNU C Library
+- GNU Multiple Precision Arithmetic Library
+- GCC support library
+- Other miscellaneous libraries (readline, pcre2, lzma, bz2, z, tirpc, ICU, tinfo, gssapi, krb5)
+
+You can install these dependencies using `apt` with the following commands:
+
+```bash
+sudo apt update
+sudo apt install libboost-filesystem-dev r-base libblas-dev libtbb-dev libstdc++6 libc6 libgomp1 libgcc1 libreadline8 libpcre2-dev liblzma5 libbz2-1.0 zlib1g libtirpc-dev libicu-dev libtinfo6 libgssapi-krb5-2 libkrb5-3 libk5crypto3 libcom-err2 libkrb5support0 libkeyutils1 libresolv2
 
 ## Contributing
 
