@@ -1,4 +1,4 @@
-# Biomapp::ChIP: Large-Scale Motif Analysis
+# BIOMAPP::CHIP: Large-Scale Motif Analysis
 
 ## Overview
 
