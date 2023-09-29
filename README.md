@@ -6,15 +6,13 @@
 
 ## How it Works
 
-The core functionality of `biomapp::chip` revolves around its innovative k-mer counting method implemented via a specialized suffix tree data structure known as `smt` (Suffix Mer Tree). The `smt` ensures both speed and accuracy in the counting process.
+The core functionality of `Biomapp::chip` revolves around its innovative k-mer counting method implemented via a specialized suffix tree data structure known as `SMT` (Sparse Motif Tree). The `SMT` ensures both speed and accuracy in the counting process.
 
 ### Algorithmic Workflow
 
 1. **Data Input**: The algorithm starts by taking sequence data as input, typically in FASTA or FASTQ format.
   
-2. **K-mer Counting**: Employing the `smt` data structure, k-mer frequencies in the sequence data are accurately and efficiently counted. This is performed through two primary algorithms:
-    - `Counting k-mers`
-    - `Creating Hash Table`
+2. **K-mer Counting**: Employing the `SMT` data structure, k-mer frequencies in the sequence data are accurately and efficiently counted.
   
 3. **Motif Discovery**: After obtaining k-mer frequencies, the algorithm proceeds to identify statistically significant motifs using a set of predefined metrics and statistical tests.
 
