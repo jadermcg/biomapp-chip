@@ -13,8 +13,8 @@ The core functionality of `Biomapp::chip` revolves around its innovative k-mer c
 1. **Data Input**: The algorithm starts by taking sequence data as input, typically in FASTA or FASTQ format.
   
 2. **K-mer Counting**: Employing the `SMT` data structure, k-mer frequencies in the sequence data are accurately and efficiently counted.
-
-3.**Pre-optimized models**: `Biomapp::chip` toolkit includes an advanced feature of pre-optimized models, which are essential for accelerating the motif discovery process. These models are generated after the `SMT` component has successfully counted the kmers.
+   
+3.  **Pre-optimized models**: `Biomapp::chip` toolkit includes an advanced feature of pre-optimized models, which are essential for accelerating the motif discovery process. These models are generated after the `SMT` component has successfully counted the kmers.
   
 4. **Motif Discovery**: After obtaining k-mer frequencies, the algorithm proceeds to identify statistically significant motifs using a efficient version of `EM` called `FAST-EM` set through predefined metrics and statistical tests.
 
