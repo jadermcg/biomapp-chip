@@ -45,7 +45,18 @@ The core functionality of `Biomapp::chip` revolves around its innovative k-mer c
 
 ## Installation
 
-Instructions to follow...
+### Step 1: Download the Binary Files
+First, you need to download all the contents of the `bin` directory from this GitHub repository.
+
+### Step 2: Place the Binary Files
+After downloading, place the binary files in a directory of your choice on your computer. For example, you could place them in a folder called `biomapp_chip` under your home directory.
+
+### Step 3: Update the PATH Environment Variable
+Lastly, you need to update your PATH environment variable to include the directory where you placed the binary files. You can do this using the `export` command in Linux. Open your terminal and run the following command:
+
+```bash
+export PATH=$PATH:/path/to/your/biomapp_chip/
+```
 
 ## Usage
 ```
@@ -63,7 +74,7 @@ Options:
 
 ## Dependencies
 
-To run the program, you will need the following libraries installed on your Ubuntu-based system:
+To run the program, you will need the following libraries installed on your Linux-based system:
 
 - Boost Filesystem
 - R
