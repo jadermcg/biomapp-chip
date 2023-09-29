@@ -1,8 +1,8 @@
-# Biomapp::chip: Large-Scale Motif Analysis
+# Biomapp::ChIP: Large-Scale Motif Analysis
 
 ## Overview
 
-`Biomapp::chip` is a computational tool designed for the efficient discovery of biological motifs in large datasets, specifically optimized for ChIP-seq data. Utilizing advanced k-mer counting algorithms and data structures, it offers a streamlined, accurate, and fast approach to motif discovery.
+`Biomapp::chip` is a C++ computational tool designed for the efficient discovery of biological motifs in large datasets, specifically optimized for ChIP-seq data. Utilizing advanced k-mer counting algorithms and data structures, it offers a streamlined, accurate, and fast approach to motif discovery.
 
 ## How it Works
 
