@@ -48,7 +48,7 @@ The core functionality of `Biomapp::chip` revolves around its innovative k-mer c
 Instructions to follow...
 
 ## Usage
-
+\```
 Uso: biomapp -i <fasta> <options>
 Options:
 
@@ -59,6 +59,7 @@ Options:
 -r <number of em iterations>
 -f <cutoff for convervenge control>
 -c <compression: 0 no compression, 1 LF4 compression>
+\```
 
 ## Dependencies
 
