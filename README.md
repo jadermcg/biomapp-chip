@@ -49,7 +49,7 @@ The core functionality of `Biomapp::chip` revolves around its innovative k-mer c
 First, you need to download all the contents of the `bin` directory from this GitHub repository.
 
 ### Step 2: Place the Binary Files
-After downloading, place the binary files in a directory of your choice on your computer. For example, you could place them in a folder called `biomapp_chip` under your home directory. Run this command line to make files executable ```sudo chmod -Rf u+x biomapp_chip```.
+After downloading, place the binary files in a directory of your choice on your computer. For example, you could place them in a folder called `biomapp_chip` under your home directory. If you created the biomapp_chip directory and downloaded the files there, run this command line to make files executable ```sudo chmod -Rf u+x biomapp_chip```.
 
 ### Step 3: Update the PATH Environment Variable
 Lastly, you need to update your PATH environment variable to include the directory where you placed the binary files. You can do this using the `export` command in Linux. Open your terminal and run the following command:
