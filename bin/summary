@@ -1,0 +1,29 @@
+#!/usr/bin/env Rscript
+args <- commandArgs(trailingOnly = TRUE)
+
+input = paste0("smt_data/models/")
+files = list.files(input, full.names = T)
+summary = "smt_data/summary.txt"
+system(paste0(">", summary))
+cat(paste0("Biomapp::chip ", date(), '\n\n'), file = summary, append = T)
+
+for (file in files) {
+  if (!endsWith(file, "png") & !endsWith(file, "txt")) {
+    cat(paste0("Model ", file, "\n"), file = summary, append = TRUE)
+    pwm = as.matrix(read.csv(file, header=FALSE, sep=","))
+    rownames(pwm) = c("A", "C", "G", "T")
+    colnames(pwm) = c()
+    pwm = round(pwm, 3)
+    pwmstr <- capture.output(write.table(pwm, sep = "\t", quote = FALSE, row.names = TRUE, col.names = F))
+    pwmstr[1] = paste0(pwmstr[1], '\n')
+    pwmstr[2] = paste0(pwmstr[2], '\n')
+    pwmstr[3] = paste0(pwmstr[3], '\n')
+    pwmstr[4] = paste0(pwmstr[4], '\n')
+    pwmstr = paste0(pwmstr[1], pwmstr[2], pwmstr[3], pwmstr[4]) 
+    cat(pwmstr, file = summary, append = T)
+    cat('\n\n', file = summary, append = T)
+    png(paste0(file, ".png"))
+    l1 = seqLogo::seqLogo(pwm)
+    dev.off()
+  }
+}
