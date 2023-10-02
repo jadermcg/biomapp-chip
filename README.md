@@ -20,6 +20,11 @@ Lastly, you need to update your PATH environment variable to include the directo
 ```bash
 export PATH=$PATH:/path/to/your/biomapp_chip/
 ```
+You can place this command inside your local user's .bashrc file so that you don't have to type it every time a command terminal is opened.
+
+```
+echo 'export PATH=$PATH:/path/to/your/biomapp_chip/' >> ~/.bashrc
+```
 
 #### Usage
 ```
