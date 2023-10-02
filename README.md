@@ -18,12 +18,12 @@ After downloading, place the binary files in a directory of your choice on your 
 Lastly, you need to update your PATH environment variable to include the directory where you placed the binary files. You can do this using the `export` command in Linux. Open your terminal and run the following command:
 
 ```bash
-export PATH=$PATH:/path/to/your/biomapp_chip/
+export PATH=$PATH:/path/to/your/biomapp_chip/bin
 ```
 You can place this command inside your local user's .bashrc file so that you don't have to type it every time a command terminal is opened.
 
 ```
-echo 'export PATH=$PATH:/path/to/your/biomapp_chip/' >> ~/.bashrc
+echo 'export PATH=$PATH:/path/to/your/biomapp_chip/bin' >> ~/.bashrc
 ```
 
 #### Usage
