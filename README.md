@@ -24,6 +24,7 @@ You can place this command inside your local user's .bashrc file so that you don
 
 ```
 echo 'export PATH=$PATH:/path/to/your/biomapp_chip/bin' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 #### Usage
