@@ -27,20 +27,6 @@ echo 'export PATH=$PATH:/path/to/your/biomapp_chip/bin' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-#### Usage
-```
-Use: biomapp -i <fasta> <options>
-Options:
-
--k <size of kmer>
--n <number of models>
--d <number of mutations>
--e <type of EM. Can be oops, zoops or anr>
--r <number of em iterations>
--f <cutoff for convervenge control>
--c <compression: 0 no compression, 1 LF4 compression>
-```
-
 #### Dependencies
 
 To run the program, you will need the following libraries installed on your Linux Ubuntu/Debian-based system:
@@ -60,6 +46,26 @@ You can install these dependencies using `apt` with the following commands:
 ```bash
 sudo apt update
 sudo apt install libarmadillo-dev libboost-filesystem-dev r-base libblas-dev libtbb-dev libstdc++6 libc6 libgomp1 libgcc-s1 libreadline8 libpcre2-dev liblzma5 libbz2-1.0 zlib1g libtirpc-dev libicu-dev libtinfo6 libgssapi-krb5-2 libkrb5-3 libk5crypto3 libcom-err2 libkrb5support0 libkeyutils1 liblz4-dev
+```
+
+Finally, you need to install two dependencies in R using the commands:
+```
+Rscript -e 'if (!require("BiocManager")) install.packages("BiocManager", dependencies=TRUE)'
+Rscript -e 'if (!require("seqLogo")) BiocManager::install("seqLogo")'
+```
+
+#### Usage
+```
+Use: biomapp -i <fasta> <options>
+Options:
+
+-k <size of kmer>
+-n <number of models>
+-d <number of mutations>
+-e <type of EM. Can be oops, zoops or anr>
+-r <number of em iterations>
+-f <cutoff for convervenge control>
+-c <compression: 0 no compression, 1 LF4 compression>
 ```
 
 ## How it Works
