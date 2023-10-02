@@ -2,7 +2,7 @@
 
 ## Overview
 
-`Biomapp::chip` is a C++ computational tool designed for the efficient discovery of biological motifs in large datasets, specifically optimized for ChIP-seq data. Utilizing advanced k-mer counting algorithms and data structures, it offers a streamlined, accurate, and fast approach to motif discovery.
+`Biomapp::chip` is a Linux/C++ computational tool designed for the efficient discovery of biological motifs in large datasets, specifically optimized for ChIP-seq data. Utilizing advanced k-mer counting algorithms and data structures, it offers a streamlined, accurate, and fast approach to motif discovery.
 
 ## How it Works
 
