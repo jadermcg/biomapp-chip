@@ -41,6 +41,27 @@ Options:
 -c <compression: 0 no compression, 1 LF4 compression>
 ```
 
+#### Dependencies
+
+To run the program, you will need the following libraries installed on your Linux Ubuntu/Debian-based system:
+- Armadillo Linear Algebra
+- Boost Filesystem
+- R
+- BLAS (Basic Linear Algebra Subprograms)
+- TBB (Threading Building Blocks)
+- Standard C++ Library
+- GNU C Library
+- GNU Multiple Precision Arithmetic Library
+- GCC support library
+- Other miscellaneous libraries (readline, pcre2, lzma, bz2, z, tirpc, ICU, tinfo, gssapi, krb5)
+
+You can install these dependencies using `apt` with the following commands:
+
+```bash
+sudo apt update
+sudo apt install sudo apt install libarmadillo-dev libboost-filesystem-dev r-base libblas-dev libtbb-dev libstdc++6 libc6 libgomp1 libgcc1 libreadline8 libpcre2-dev liblzma5 libbz2-1.0 zlib1g libtirpc-dev libicu-dev libtinfo6 libgssapi-krb5-2 libkrb5-3 libk5crypto3 libcom-err2 libkrb5support0 libkeyutils1 libresolv2 liblz4-dev
+```
+
 ## How it Works
 
 The core functionality of `Biomapp::chip` revolves around its innovative k-mer counting method implemented via a specialized suffix tree data structure known as `SMT` (Sparse Motif Tree). The `SMT` ensures both speed and accuracy in the counting process.
@@ -79,24 +100,3 @@ The core functionality of `Biomapp::chip` revolves around its innovative k-mer c
 - **Accuracy**: Advanced counting algorithms and statistical tests ensure a high rate of true positive motif discoveries.
   
 - **Versatility**: Suitable for a wide range of applications in genomics, especially in the study of transcription factors and their binding sites.
-
-## Dependencies
-
-To run the program, you will need the following libraries installed on your Linux Ubuntu/Debian-based system:
-- Armadillo Linear Algebra
-- Boost Filesystem
-- R
-- BLAS (Basic Linear Algebra Subprograms)
-- TBB (Threading Building Blocks)
-- Standard C++ Library
-- GNU C Library
-- GNU Multiple Precision Arithmetic Library
-- GCC support library
-- Other miscellaneous libraries (readline, pcre2, lzma, bz2, z, tirpc, ICU, tinfo, gssapi, krb5)
-
-You can install these dependencies using `apt` with the following commands:
-
-```bash
-sudo apt update
-sudo apt install sudo apt install libarmadillo-dev libboost-filesystem-dev r-base libblas-dev libtbb-dev libstdc++6 libc6 libgomp1 libgcc1 libreadline8 libpcre2-dev liblzma5 libbz2-1.0 zlib1g libtirpc-dev libicu-dev libtinfo6 libgssapi-krb5-2 libkrb5-3 libk5crypto3 libcom-err2 libkrb5support0 libkeyutils1 libresolv2 liblz4-dev
-```
