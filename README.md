@@ -107,7 +107,7 @@ The core functionality of `Biomapp::chip` revolves around its innovative k-mer c
   
 - **Resource Efficiency**: The use of pre-optimized models reduces the computational resources required, making it ideal for lower-end systems as well.
 
-## Why Use biomapp::chip?
+## Why Use Biomapp::chip?
 
 - **Efficiency**: Designed to handle large volumes of data, the tool excels in scenarios where traditional motif discovery algorithms falter.
   
