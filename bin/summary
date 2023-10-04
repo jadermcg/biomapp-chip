@@ -9,11 +9,20 @@ cat(paste0("Biomapp::chip ", date(), '\n\n'), file = summary, append = T)
 
 for (file in files) {
   if (!endsWith(file, "png") & !endsWith(file, "txt")) {
-    cat(paste0("Model ", file, "\n"), file = summary, append = TRUE)
     pwm = as.matrix(read.csv(file, header=FALSE, sep=","))
     rownames(pwm) = c("A", "C", "G", "T")
     colnames(pwm) = c()
+    pssm = pwm * (log2(pwm) - log2(0.25))
+    ic = sum(pssm * pwm)
+    ex = sum(pssm * 0.25)
+    vx = sum(colSums(pssm^2 * 0.25) - colSums(pssm * 0.25)^2)
+    sx = sqrt(vx)
+    loc = ex - 0.57722 * (sx * sqrt(6))/pi
+    scale = sx * sqrt(6)/pi
+    pvn = 1 - pnorm(q = ic, mean = ex, sd = sx)
+    pvg = 1 - evd::pgumbel(q = ic, loc = loc, scale = scale)
     pwm = round(pwm, 3)
+    cat(paste0("Model ", basename(file), " > p-value: ", round(pvg, 5) ,": \n"), file = summary, append = TRUE)
     pwmstr <- capture.output(write.table(pwm, sep = "\t", quote = FALSE, row.names = TRUE, col.names = F))
     pwmstr[1] = paste0(pwmstr[1], '\n')
     pwmstr[2] = paste0(pwmstr[2], '\n')
