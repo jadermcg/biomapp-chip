@@ -52,6 +52,7 @@ Finally, you need to install two dependencies in R using the commands:
 ```
 Rscript -e 'if (!require("BiocManager")) install.packages("BiocManager", dependencies=TRUE)'
 Rscript -e 'if (!require("seqLogo")) BiocManager::install("seqLogo")'
+Rscript -e 'if (!require("evd")) BiocManager::install("evd")'
 ```
 
 #### Usage
@@ -67,6 +68,13 @@ Options:
 -f <cutoff for convervenge control>
 -c <compression: 0 no compression, 1 LF4 compression>
 ```
+#### Example
+To understand how the program works, you can run Biomapp::chip on the example dataset that is provided in the project root.
+
+```
+biomapp -i MA0003.4.fasta.masked.dust -k 14 -n 5 -d 2-e zoops -r 1000 -f 0.001
+```
+This execution of Biomapp::chip will process the dataset MA0003.4.fasta.masked.dust using kmers of length 14. The -n 5 argument specifies that the five most optimal PWM models will be generated. The -d 2 parameter indicates that up to two mutations are allowed within each model. Regarding the Expectation-Maximization (EM) algorithm, the chosen type is "zoops," as denoted by the -e zoops parameter. The stopping criteria for the EM involve two components: the maximum number of iterations, set at 1000 (indicated by -r 1000), and a minimum threshold for improvement between successive solutions, set at 0.001 (indicated by -f 0.001). The convergence process will be reached when either the number of iterations exceeds 1000 or the improvement between solutions falls below 0.001.
 
 ## How it Works
 
