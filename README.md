@@ -48,7 +48,7 @@ sudo apt update
 sudo apt install libarmadillo-dev libboost-filesystem-dev r-base libblas-dev libtbb-dev libstdc++6 libc6 libgomp1 libgcc-s1 libreadline8 libpcre2-dev liblzma5 libbz2-1.0 zlib1g libtirpc-dev libicu-dev libtinfo6 libgssapi-krb5-2 libkrb5-3 libk5crypto3 libcom-err2 libkrb5support0 libkeyutils1 liblz4-dev
 ```
 
-Finally, you need to install some dependencies in R using the commands:
+Finally, you need to install some dependencies in R using these commands:
 ```
 Rscript -e 'if (!require("BiocManager")) install.packages("BiocManager", dependencies=TRUE)'
 Rscript -e 'if (!require("seqLogo")) BiocManager::install("seqLogo")'
