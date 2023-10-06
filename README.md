@@ -1,4 +1,4 @@
-![Texto alternativo](logo.jpeg)
+<img src="logo.jpg" width="200" height="200">
 
 # BIOMAPP::CHIP: Large-Scale Motif Analysis
 
