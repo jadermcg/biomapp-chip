@@ -1,3 +1,5 @@
+![Texto alternativo](logo.jpeg)
+
 # BIOMAPP::CHIP: Large-Scale Motif Analysis
 
 ## Overview
