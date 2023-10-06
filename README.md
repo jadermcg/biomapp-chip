@@ -1,4 +1,4 @@
-<img src="logo.jpeg" width="500" height="200">
+<img src="logo.jpeg" width="350" height="350">
 
 # BIOMAPP::CHIP: Large-Scale Motif Analysis
 
