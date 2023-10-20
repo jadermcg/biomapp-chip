@@ -1,0 +1,4 @@
+CXX = g++
+CXXFLAGS = -std=c++17 -O3 -march=native -fopenmp -DARMA_64BIT_WORD -DARMA_USE_HDF5 -Wno-ignored-attributes -I/usr/include/hdf5/serial
+LDFLAGS = -L/lib/x86_64-linux-gnu -L/usr/lib
+LIBS = -lboost_system -lboost_filesystem -lR -lhdf5_serial -lblas -lz -ltbb -llz4 -llmdb -lsqlite3
