@@ -30,6 +30,7 @@ source ~/.bashrc
 #### Dependencies
 
 To run the program, you will need the following libraries installed on your Linux Ubuntu/Debian-based system:
+- Linux Operation System
 - Armadillo Linear Algebra
 - Boost Filesystem
 - R
