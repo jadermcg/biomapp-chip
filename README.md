@@ -1,5 +1,3 @@
-![biomapp](https://github.com/jadermcg/biomapp-chip/blob/e9896acbaded8e974569c73677e3b1750ccae496/biomapp.png)
-
 # BIOMAPP::CHIP: Large-Scale Motif Analysis
 
 ## Overview
