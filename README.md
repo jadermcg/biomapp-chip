@@ -51,9 +51,9 @@ sudo apt install libarmadillo-dev libboost-filesystem-dev r-base libblas-dev lib
 
 Finally, you need to install some dependencies in R using these commands:
 ```
-Rscript -e 'if (!require("BiocManager")) install.packages("BiocManager", dependencies=TRUE)'
-Rscript -e 'if (!require("seqLogo")) BiocManager::install("seqLogo")'
-Rscript -e 'if (!require("evd")) BiocManager::install("evd")'
+sudo Rscript -e 'if (!require("BiocManager")) install.packages("BiocManager", dependencies=TRUE)'
+sudo Rscript -e 'if (!require("seqLogo")) BiocManager::install("seqLogo")'
+sudo Rscript -e 'if (!require("evd")) BiocManager::install("evd")'
 ```
 
 #### Usage
